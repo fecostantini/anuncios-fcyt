@@ -23,7 +23,7 @@ let getUpcomingEvents = userDate => {
 	events.forEach(event => {
 		eventDate = new Date(event.date);
 		eventHasntHappenedYet = eventDate > userDate;
-
+		console.log(`fecha evento: ${eventDate} - fecha usuario: ${userDate}`);
 		if (eventHasntHappenedYet) upcomingEvents.push(event);
 	});
 
@@ -33,6 +33,12 @@ let getUpcomingEvents = userDate => {
 app.get('/', (req, res) => {
 	let userDate = getUserDate();
 	let upcomingEvents = getUpcomingEvents(userDate);
+
+	console.log(userDate);
+
+	upcomingEvents.forEach(event => {
+		console.log(new Date(event.date));
+	});
 
 	res.render('home', {
 		upcomingEvents: upcomingEvents,
