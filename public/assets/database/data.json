@@ -3,22 +3,22 @@
 		{
 			"stand": 1,
 			"msg": "la lorem ipsumeada concha de tu vieja",
-			"date": "2019-10-01T15:30:00.000Z"
+			"date": "October 1, 2019 15:30:00"
 		},
 		{
 			"stand": 2,
 			"msg": "Pelea de sumobots",
-			"date": "2019-10-02T17:30:00.000Z"
+			"date": "October 2, 2019 17:30:00"
 		},
 		{
 			"stand": 3,
 			"msg": "Pelea de gallos",
-			"date": "2019-10-03T15:30:00.000Z"
+			"date": "October 3, 2019 15:30:00"
 		},
 		{
 			"stand": 4,
 			"msg": "Demostración IA",
-			"date": "2019-10-04T15:30:00.000Z"
+			"date": "October 4, 2019 17:30:00"
 		}
 	]
 }
