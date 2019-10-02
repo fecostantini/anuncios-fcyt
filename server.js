@@ -4,7 +4,7 @@ const hbs = require('hbs');
 const database = require('./public/assets/database/database');
 
 const app = express();
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('./public'));
 port = process.env.PORT || 3000;
 
 // Express HBS engine
