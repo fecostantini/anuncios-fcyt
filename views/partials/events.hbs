@@ -1,21 +1,15 @@
-<div id="CajaCentral" class="CentrarVerical">
-  <div id="Anuncios" class="CentrarVerical">
-    <table class="CentrarVerical">
-      <tr>
-        <th>Stand</th>
-        <th></th>
-        <th>Hora</th>
-      </tr>
-      <tr>
-        <td id="Stand1">1</td>
-        <td id="Anuncio1">Mensaje de aviso.</td>
-        <td id="Horario1">20:30</td>
-      </tr>
-      <tr>
-        <td id="stand2">2</td>
-        <td id="Anuncio2">Mensaje de aviso numero 2.</td>
-        <td id="Horario2">20:50</td>
-      </tr>
-    </table>
+<div>
+  <div class="w3-container w3-content">
+    <p class="w3-opacity"><b>Eventos siguientes</b></p>
+
+    {{#each upcomingEvents}}
+    <div class="w3-panel w3-white w3-card w3-display-container">
+      <span class="w3-display-topright w3-padding w3-opacity w3-wide">STAND
+        {{stand}}</span>
+      <br>
+      <h5><b>{{msg}}</b></h5>
+      <p><i>{{formatDate date ../userDate}}</i></p>
+    </div>
+    {{/each}}
   </div>
 </div>

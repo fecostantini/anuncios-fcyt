@@ -1,15 +1,23 @@
+require('./public/assets/js/helpers/helpers');
 const express = require('express');
-var hbs = require('hbs');
+const hbs = require('hbs');
 const database = require('./public/assets/database/database');
 
-/*
-testDateStr = '"2019-10-17T15:29:00.000Z"';
-testDateJSON = JSON.parse(testDateStr);
+const app = express();
+app.use(express.static(__dirname + '/public'));
+port = process.env.PORT || 3000;
+
+// Express HBS engine
+app.set('view engine', 'hbs');
+hbs.registerPartials(__dirname + '/views/partials');
 
 let events = database.getEvents();
 
-let getUpcomingEvents = () => {
-	const userDate = new Date(testDateJSON);
+let getUserDate = () => {
+	return new Date();
+};
+
+let getUpcomingEvents = userDate => {
 	let upcomingEvents = [];
 
 	events.forEach(event => {
@@ -22,19 +30,14 @@ let getUpcomingEvents = () => {
 	return upcomingEvents;
 };
 
-console.log(getUpcomingEvents());
-*/
-
-const app = express();
-app.use(express.static(__dirname + '/public'));
-port = process.env.PORT || 3000;
-
-// Express HBS engine
-app.set('view engine', 'hbs');
-hbs.registerPartials(__dirname + '/views/partials');
-
 app.get('/', (req, res) => {
-	res.render('home');
+	let userDate = getUserDate();
+	let upcomingEvents = getUpcomingEvents(userDate);
+
+	res.render('home', {
+		upcomingEvents: upcomingEvents,
+		userDate: userDate
+	});
 });
 
 app.listen(port, () => {

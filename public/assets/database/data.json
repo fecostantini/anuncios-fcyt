@@ -3,22 +3,22 @@
 		{
 			"stand": 1,
 			"msg": "la lorem ipsumeada concha de tu vieja",
-			"date": "2019-10-15T15:30:00.000Z"
+			"date": "2019-10-01T15:30:00.000Z"
 		},
 		{
 			"stand": 2,
-			"msg": "la lorem ipsumeada concha de tu vieja",
-			"date": "2019-10-16T17:30:00.000Z"
+			"msg": "Pelea de sumobots",
+			"date": "2019-10-02T17:30:00.000Z"
 		},
 		{
 			"stand": 3,
-			"msg": "la lorem ipsumeada concha de tu vieja",
-			"date": "2019-10-17T15:30:00.000Z"
+			"msg": "Pelea de gallos",
+			"date": "2019-10-03T15:30:00.000Z"
 		},
 		{
 			"stand": 4,
-			"msg": "la lorem ipsumeada concha de tu vieja",
-			"date": "2019-10-18T15:30:00.000Z"
+			"msg": "Demostración IA",
+			"date": "2019-10-04T15:30:00.000Z"
 		}
 	]
 }
