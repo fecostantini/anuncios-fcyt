@@ -6,12 +6,13 @@ hbs.registerHelper('formatDate', (eventStrDate, userDate) => {
 	let formattedDate = '';
 	let eventDay = eventDate.getDate();
 	let today = userDate.getDate();
-
+	formattedDate += `<br>hoy: ${userDate}<br> evento: ${eventDate}`;
+	/*
 	if (today == eventDay) formattedDate += 'Hoy a las ';
 	else if (today + 1 == eventDay) formattedDate += 'Mañana a las ';
 	else formattedDate += `En ${eventDay - today} días a las `;
-
+  
 	formattedDate += `${eventDate.getHours()}:${eventDate.getMinutes()}hs`;
-
+  */
 	return formattedDate;
 });
